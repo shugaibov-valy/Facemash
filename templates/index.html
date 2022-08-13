@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/style.css" type="text/css" media="all">
+    <link rel="shortcut icon" href="static/333.png" type="image/png">
+<title>Facemash-152</title>
+</head>
+<header>
+    <h1 class="fasemash"> <a href ="/" style="text-decoration: none; color: rgb(243, 232, 232) !important;" > FACEMASH-152 </a> </h1>
+</header>
+    <h2 class="sayHi"> Чья фотка круче? <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/fire_1f525.png" width="70px" height="70px"> Кликни на фото, чтобы выбрать! </h2>
+
+<!-- ПРОФИЛЬ КАРТА -->
+
+<aside class="profile-card">
+  <header>
+      <img src="https://sun9-2.userapi.com/impg/FjJIIe5XbcmUIHsAcaE8HdRM0YyU5m_uAybPhQ/PucxXLau9NI.jpg?size=1600x1600&quality=96&sign=7a866db1c6fa9e31d42310efb4d45c9b&type=album">
+    <h1>Airat Anderzhanov</h1>
+{#    <h2>- Студент 2 курса -</h2>#}
+  </header>
+  <div class="profile-bio"> </div>
+  <ul class="profile-social-links">
+{#    <li>#}
+{#      <a href="https://vk.com/a.anderzhanov" target="_blank">#}
+{#        <img src="https://cdn.icon-icons.com/icons2/1121/PNG/512/1486147202-social-media-circled-network10_79475.png">#}
+{#      </a>#}
+{#    </li>#}
+{#    <li>#}
+{#      <a href="https://www.instagram.com/_anderzhanov_/" target="_blank">#}
+{#        <img src="static/inst.png">#}
+{#      </a>#}
+{#    </li>#}
+
+<!-- Github -->
+    <li>
+      <a href="https://github.com/" target="_blank">
+        <img src="static/github.png">
+      </a>
+    </li>
+  </ul>
+</aside>
+
+<!-- ТЕМНАЯ/СВЕТЛАЯ ТЕМА -->
+
+<div class="theme" id="toggleThemeBtn">
+    <img src="static/light.svg" id="toggleThemeImage"></button>
+
+        <script src="static/script.js"></script>
+</div>
+
+<!-- ГЛАВНАЯ ЧАСТЬ -->
+
+<section id="section-photo">
+<div class="right exmpl hover-image-scale">
+      <img src="{{ right.photo }}" alt="" id="imgClickAndChangeL" onclick="changeImageR()">
+    </div>
+    <div>
+  <a target="_blank" class="buttonVKleft" id ="left-link" href="https://vk.com/id{{ right.vk_id }}">Перейти на страницу VK</a>
+</div>
+<div class="left acc2 hover-image-scale">
+  <img src="{{ left.photo }}" alt="" id="imgClickAndChangeR" onclick="changeImageL()">
+</div>
+<div>
+  <a target="_blank" class="buttonVKright" id ="right-link" href="https://vk.com/id{{ left.vk_id }}">Перейти на страницу VK</a>
+</div>
+</section>
+</html>
+
+<div>
+    <h3>VS</h3>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+   
+  function updateRaiting(vk_id){
+    $.ajax({
+      url: "/update_raiting/vk_id=" + vk_id,
+      type: "GET",
+      dataType: "json",
+      success: function(data){
+        
+      }
+      });
+  }
+
+  function changeImageL(){
+    $.ajax({
+      url: "/random_user",
+      type: "GET",
+      dataType: "json",
+      success: function(data){
+        updateRaiting(document.getElementById("right-link").href.split("id")[1])
+        document.getElementById("left-link").href = "https://vk.com/id" + data[0]
+        document.getElementById("imgClickAndChangeL").src = data[1]
+      }
+      });
+  }
+
+  function changeImageR(){
+    $.ajax({
+      url: "/random_user",
+      type: "GET",
+      dataType: "json",
+      success: function(data){
+        updateRaiting(document.getElementById("left-link").href.split("id")[1])
+        document.getElementById("right-link").href = "https://vk.com/id" + data[0]
+        document.getElementById("imgClickAndChangeR").src = data[1]
+      }
+      });
+  }
+
+
+</script>
+
+
+
+
+
+
+<!-- ВСПЛЫВАЮЩЕЕ МОДАЛЬНОЕ ОКНО 152 РЕГИОН -->
+<div id="overlay">
+    <div class="popup">
+        <div class="text-popup">
+          Салют молодые!
+        </div>
+        <div class="text-popup1">
+            Я замутил аналог давно нашумевшего в свое время сайта - facemash.com, созданным великим Марком Цукербергом, но не среди студенток университета, а среди татарочек <span class="mirea">152 РЕГИОНА</span>. Вы попали сюда из-за своей внешности?  Нет. Будем ли мы судить по ней? Да.
+         </div>
+         <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
+</div>
+</div>
+
+<script type="text/javascript">
+        var delay_popup = 1000;
+        setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+</script>
+
+
+
+
+
+<!-- КНОПКА ТОП 10 -->
+
+<br><br><br><br><br><br>
+
+    <footer>
+        <button class="TopTen" > Посмотреть ТОП 10 </button><br>
+       <section class="table-footer">
+        <table class="table" id="table_top">
+          <thead>
+            <tr>
+                <th class="number"> № </th>
+              <th>Фото</th>
+              <th class="scoreR">Рейтинг</th>
+              <th>Ссылка</th>
+                    <th>
+                        {% include "search_input.html" %}
+                    </th>
+            </tr>
+          </thead>
+       {% include "table.html" %}
+       </section>
+    </footer>
+
+
+
+<script>
+  
+    $('.TopTen').on('click',function(){ 
+
+         $('.TopTen span').toggleClass('rotate');
+
+         if( $('table').css('display') == 'none'){
+            $('table').show();
+         }else{
+            $('table').hide();
+         }
+
+    });
+</script>
+
+
+
+
+<!-- АЯКС ЗАПРОСЫ // ДОБАВЛЕНИЕ ГОЛОСА ПРИ КЛИКЕ // КУКИ-ФАЙЛЫ -->
+
+
+
+
+
+<!-- КНОПКА СЕРДЦА ДЛЯ МОДАЛЬНОГО ОКНА  -->
+
+<div id="openModal" class="modal1">
+  <div class="modal1-dialog">
+    <div class="modal1-content">
+      <div class="modal1-header">
+        <h4>ДИСКЛЕЙМЕР</h4>
+        <a href="#close" title="Закрыть" class="close1"><img src="static/771.png" width="100%"></a>
+      </div>
+      <div class="modal-body">
+        <ul>
+            <h5>
+                <p>Что такое фейсмаш? Проект facemash был создан Цукербергом в 2003 году, когда он учился в Гарвардском университете.</p>
+                <p>Основной идеей было сравнение фотографий студенток, подбиравшихся в случайном порядке - пользователь должен был выбрать, кто из двух девушек круче.</p>
+                <p>Данный сайт создан исключительно в развлекательных целях и не несёт цели кого-то оскорбить или унизить.</p>
+            </h5>
+		</ul>
+      </div>
+        <h6>Огромнейшую благодарность за помощь в создании сайта я хочу выразить моему одногруппнику  - <a href="https://github.com/levjkeR" class="LevLink" target="_blank" title="Открыть страницу GitHub">Льву Кикоть</a>, без него ничего бы не получилось!</h6></div>
+    </div>
+  </div>
+</div>
+        <img class="heart" src="static/1234567.png" onclick="window.location.href = '#openModal';">
+
+
+
+<script>
+        $(function(){
+   window.setInterval(function(){
+      var search = $(search_input).val()
+      
+      if(search == ''){
+        loadTable()
+      }
+      else {
+        if (search.includes("id")){
+        search = search.split("id")[1]
+        }
+        searchAccount(search)
+      }
+}, 1000)
+        })
+
+function loadTable(){
+   $.ajax({
+      url: "/update_table",
+      type: "POST",
+      dataType: "json",
+      success: function(data){
+         $(table_body).replaceWith(data)
+         $('table').show();
+      }
+   });
+}
+
+
+
+function searchAccount(search_text){
+  $.ajax({
+     url: "/search_user/vk_id=" + search_text,
+     type: "POST",
+     dataType: "json",
+     success: function(data){
+        $(table_body).replaceWith(data)
+        $('table').show();
+
+     }
+  });
+}
+
+</script>

@@ -1,0 +1,23 @@
+
+	 <tbody class="InsertTop" id="table_body">
+    
+    {# 1 #}
+     {% for user in top_users %}
+		 <tr>
+             <td class="numberCenter">
+               {% if loop.index in [1, 2, 3] %}
+               <img class="TopPhoto" src="static/{{ loop.index }}st.gif"> 
+               {% else %}
+               {{ loop.index }}
+               {% endif %}
+              </td>
+            <td  class="photoCenter">
+                <img class="TopPhoto" src="{{ user.photo }}" alt="">
+        </td>
+			<td class="scoreCenter">{{ user.rating }}</td>
+			<td class="scoreCenter"><a target="_blank" title="Перейти на страницу VK" href="https://vk.com/id{{ user.vk_id }}"><img class="vktop" src="https://img.icons8.com/color/48/000000/vk-com.png"/></a></td>
+		</tr>
+    {% endfor %}
+
+	</tbody>
+</table>

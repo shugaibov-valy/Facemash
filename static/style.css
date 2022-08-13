@@ -1,0 +1,1017 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap');
+*{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+.fasemash{
+    width: 100%;
+    padding:20px;
+    font-size: 45px;
+    background-color:#790606;
+    color:rgb(243, 232, 232);
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.23em;
+    text-align: center;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.sayHi{
+    width:95%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-weight: 200;
+    padding: 15px 0px;
+    word-spacing: 0.5em;
+    font-size: 45px;
+}
+
+header img {
+  border-radius: 50%;
+  margin: 13px auto;
+  display: block;
+  width: 70px;
+  border: 3px solid #fff;
+}
+
+aside {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1%;
+  left: 3%;
+  display: block;
+  height: 100px;
+  width: 100px;
+  background: url(gradient.jpg);
+  background-size: cover;
+  overflow: hidden;
+  /*box-shadow: 0 0 100px 10px #fff;*/
+  transition: all ease 0.3s;
+    z-index:  100;
+}
+aside:hover {
+  border-radius: 5px;
+  height: 180px;
+  width: 250px;
+  /*box-shadow: 0 0 70px 10px #fff;*/
+}
+
+aside:hover header img {
+  animation: profile_image 2000ms linear both;
+  animation-delay: 0.5s;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+  line-height: 25px;
+  display: inline-block;
+  padding: 15px;
+  transition: all ease 0.250s;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+/*header h2{*/
+/*    color: #fff;*/
+/*    font-size: 20px;*/
+/*}*/
+
+
+/*aside:hover header h1 {*/
+/*  margin-top: 0px;*/
+/*  outline: 0 solid #fff;*/
+/*  border-top: 0px solid #fff;*/
+/*  border-bottom: 1px solid #fff;*/
+/*}*/
+.profile-bio {
+  margin-top: 30px;
+  padding: 1px 20px 10px 20px !important;
+  transition: all linear 1.5s;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.42) 49%, rgba(0, 0, 0, 0.61) 100%);
+}
+
+/*aside:hover .profile-bio {*/
+/*  opacity: 1;*/
+/*}*/
+
+.profile-bio p:first-child {
+  text-align: center;
+  font-size: 16px;
+}
+
+.profile-social-links {
+  position: relative;
+  margin-top: -200px;
+  margin-left: -100px;
+  list-style-type: none;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+aside:hover .profile-social-links {
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.profile-social-links li img {
+  width: 25px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+/*PROFILE IMAGE ANIMATE */
+
+@keyframes profile_image {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  3.4% {
+    transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  4.7% {
+    transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  6.81% {
+    transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  9.41% {
+    transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  10.21% {
+    transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  13.61% {
+    transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14.11% {
+    transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  17.52% {
+    transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18.72% {
+    transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  21.32% {
+    transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  24.32% {
+    transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  25.23% {
+    transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.03% {
+    transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.93% {
+    transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  35.54% {
+    transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  36.74% {
+    transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  41.04% {
+    transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  44.44% {
+    transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  52.15% {
+    transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  59.86% {
+    transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  63.26% {
+    transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  75.28% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  85.49% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  90.69% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+/*NAME ANIMATE */
+
+aside:hover header h1 {
+  animation: name_and_job 1500ms linear both;
+  animation-delay: 0.4s;
+}
+
+@keyframes name_and_job {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, 0, 0, 1);
+  }
+  1.3% {
+    transform: matrix3d(3.905, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -237.02, 0, 0, 1);
+  }
+  2.55% {
+    transform: matrix3d(4.554, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -182.798, 0, 0, 1);
+  }
+  4.1% {
+    transform: matrix3d(4.025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -125.912, 0, 0, 1);
+  }
+  5.71% {
+    transform: matrix3d(3.039, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -79.596, 0, 0, 1);
+  }
+  8.11% {
+    transform: matrix3d(1.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -31.647, 0, 0, 1);
+  }
+  8.81% {
+    transform: matrix3d(1.581, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.84, 0, 0, 1);
+  }
+  11.96% {
+    transform: matrix3d(1.034, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.825, 0, 0, 1);
+  }
+  12.11% {
+    transform: matrix3d(1.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.53, 0, 0, 1);
+  }
+  15.07% {
+    transform: matrix3d(0.947, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 12.662, 0, 0, 1);
+  }
+  16.12% {
+    transform: matrix3d(0.951, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.007, 0, 0, 1);
+  }
+  27.23% {
+    transform: matrix3d(1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.352, 0, 0, 1);
+  }
+  27.58% {
+    transform: matrix3d(1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.121, 0, 0, 1);
+  }
+  38.34% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.311, 0, 0, 1);
+  }
+  40.09% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.291, 0, 0, 1);
+  }
+  50% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.048, 0, 0, 1);
+  }
+  60.56% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.007, 0, 0, 1);
+  }
+  82.78% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+
+aside:hover ul li:first-child {
+  animation: social_animation 2000ms ease-in-out both;
+  animation-delay: 0.75s;
+}
+
+aside:hover ul li:nth-child(2) {
+  animation: social_animation 2000ms ease-in-out both;
+  animation-delay: 1s;
+}
+
+aside:hover ul li:nth-child(3) {
+  animation: social_animation 2000ms ease-in-out both;
+  animation-delay: 1.25s;
+}
+
+@keyframes social_animation {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, 0, 0, 1);
+  }
+  1.3% {
+    transform: matrix3d(3.905, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -237.02, 0, 0, 1);
+  }
+  2.55% {
+    transform: matrix3d(4.554, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -182.798, 0, 0, 1);
+  }
+  4.1% {
+    transform: matrix3d(4.025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -125.912, 0, 0, 1);
+  }
+  5.71% {
+    transform: matrix3d(3.039, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -79.596, 0, 0, 1);
+  }
+  8.11% {
+    transform: matrix3d(1.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -31.647, 0, 0, 1);
+  }
+  8.81% {
+    transform: matrix3d(1.581, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.84, 0, 0, 1);
+  }
+  11.96% {
+    transform: matrix3d(1.034, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.825, 0, 0, 1);
+  }
+  12.11% {
+    transform: matrix3d(1.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.53, 0, 0, 1);
+  }
+  15.07% {
+    transform: matrix3d(0.947, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 12.662, 0, 0, 1);
+  }
+  16.12% {
+    transform: matrix3d(0.951, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.007, 0, 0, 1);
+  }
+  27.23% {
+    transform: matrix3d(1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.352, 0, 0, 1);
+  }
+  27.58% {
+    transform: matrix3d(1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.121, 0, 0, 1);
+  }
+  38.34% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.311, 0, 0, 1);
+  }
+  40.09% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.291, 0, 0, 1);
+  }
+  50% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.048, 0, 0, 1);
+  }
+  60.56% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.007, 0, 0, 1);
+  }
+  82.78% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+
+/*DARK THEME*/
+
+body.dark {
+    background: #303133;
+    color: #fff;
+}
+
+body.dark .content {
+    box-shadow: 0 0 5px #1d2225;
+}
+
+body.dark button {
+    box-shadow: 0 0 5px #1d2225;
+    color: #fff;
+}
+
+body.dark button:hover {
+    box-shadow: 0 0 10px #1d2225;
+}
+
+body.dark button:active {
+    box-shadow: inset 0 0 5px #1d2225;
+}
+
+section:not(:first-child) {
+    margin-top: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    box-shadow: 0 0 5px silver;
+    cursor: pointer;
+    outline: none;
+    position: fixed;
+    bottom: 2%;
+    left: 80%;
+    z-index: 100;
+}
+
+button:hover {
+    box-shadow: 0 0 10px silver;
+}
+
+button:active {
+    box-shadow: inset 0 0 5px silver;
+}
+.theme {
+    position: fixed;
+    cursor: pointer;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(39,38,40,0.4);
+    border: none;
+}
+body.dark .theme{
+  background-color: #151719;
+}
+
+
+
+/* Главная часть */
+
+section{
+    margin: 0 auto;
+    margin-top:40px;
+    width:600px;
+    justify-content: center;
+    display:flex;
+}
+
+
+
+.right  {
+        width: 300px;
+        height: 300px;
+        border: 7px solid #790606;
+      }
+      .exmpl {
+        overflow: hidden;
+
+        margin-left: 500px;
+        position: absolute;
+
+        
+        
+      }
+      .exmpl img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+      }
+
+
+
+.left {
+        width: 300px;
+        height: 300px;
+        border: 7px solid #790606;
+      }
+      .acc2 {
+        overflow: hidden;
+        margin-left: -500px;
+        position: absolute;
+
+
+      }
+      .acc2 img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+ 
+
+      }     
+
+
+.hover-image-scale {
+  display: inline-block;
+  overflow: hidden; /* Скрываем всё за контуром */
+}
+.hover-image-scale img {
+  transition: 1s; /* Время эффекта */
+  display: block;
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+
+
+
+/* Кнопка vs */
+
+  h3 {
+    font-family: 'Andale Mono', monospace;
+    font-size: 6rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+    margin-top: 100px;
+    color: #FFFFFF;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 15px #790606;
+    }
+    to {
+      text-shadow: 0 0 16px #790606, 0 0 13px #790606;
+    }
+  }
+
+
+
+/*Кнопка vk*/
+
+a.buttonVKleft {
+  display: inline-block;
+  background: #2196f3;
+  color: #fff;
+  padding: 12px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Tahoma;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 100;
+  position: absolute;
+  margin-left: 140px;
+  margin-top: 320px;
+}
+.buttonVKleft:hover {
+    background: rgba(0,0,0,0);
+    color: #3a7999;
+    box-shadow: inset 0 0 0 3px #3a7999;
+}
+a.buttonVKright {
+  display: inline-block;
+  background: #2196f3;
+  color: #fff;
+  padding: 12px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Tahoma;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 100;
+  position: absolute;
+  margin-left: -360px;
+  margin-top: 320px;
+  }
+.buttonVKright:hover {
+    background: rgba(0,0,0,0);
+    color: #3a7999;
+    box-shadow: inset 0 0 0 3px #3a7999;
+}
+
+
+
+
+/* Всплывающее Модальное Окно */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999;
+    -webkit-animation: fade 0.6s;
+    -moz-animation: fade 0.6s;
+    animation: fade 0.6s;
+    overflow: auto;
+}
+.popup {
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 85%;
+    max-width: 700px;
+    position: absolute;
+    padding:50px 20px 70px 20px;
+    border: 1 px solid #383838;
+    z-index: 1000;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    border-radius: 14px;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-animation: fade .16s;
+    -moz-animation: fade .16s;
+    animation: fade .16s;
+
+}
+.text-popup{
+  font: 40px 'Arial Black', sans-serif;
+  margin-top: -40px;
+  margin-left: 150px;
+  color: #ffffff;
+
+}
+.text-popup1{
+    font: 20px 'Tahoma', Arial, sans-serif;
+    margin-top: 10px;
+    color: #ffffff;
+}
+.mirea{
+    font: 20px 'Arial Black', sans-serif;
+    margin-top: 10px;
+    color: #790606;
+}
+.close {
+    left: 250px;
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    margin-left: 50px;
+    border: none;
+    background-color: #790606;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    outline: none;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    border-radius: 14px;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "ПОЕХАЛИ!";
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+/* кнопка закрытия при наведении */
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+}
+
+
+
+
+/* ТОП 10 */
+
+.TopTen span{
+    font-size: 15px;
+    margin-left: 8px;
+    transition: 0.4s all;
+    display: inline-block;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.showTable{
+    display: inline-block;
+}
+.table {
+	width: 100%;
+    margin-bottom: 20px;
+	border: 1px solid #000000;
+    border-bottom: 2px solid #000000;
+    border-collapse: collapse;
+    display:none;
+    transition: 1s all;
+}
+.table th {
+	font-weight: bold;
+    padding: 5px;
+	/*padding: 15px;*/ /* <---- топ 10 без поле поиска */
+	background: #790606;
+	border: 2px solid #000000;
+}
+.table th .scoreR{
+	max-width:40px;
+}
+.table td {
+	border: 2px solid #000000;
+	padding: 15px;
+}
+.table-footer{
+    width:70%;
+}
+.button{
+    display:block;
+    width:50%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgb(250, 62, 62);
+    border:1px solid black;
+    transition: 0.2s all;
+}
+
+.TopTen{
+    position: relative;
+    background-color: #790606;
+    display:block;
+    width:30%;
+    padding: 10px;
+    color:#fff;
+    border:1px solid black;
+    transition: 0.2s all;
+    margin-top: 120px;
+    left: 35%;
+    font: 20px 'Arial Black', sans-serif;
+    border-radius: 9px;
+}
+.photoCenter{
+    text-align: center;
+}
+.TopPhoto{
+    width: 50px;
+    object-fit: cover;
+    height: 50px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.TopPhoto:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  outline: none;
+  background: #FFFFFF;
+  color: #000000;
+}
+.search1{
+  height: 40px;
+  width: 80px;
+  position: absolute;
+  top: 2.15px;
+  left: 219px;
+  background: #790606;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.search1:hover {
+    background: red;
+}
+.vktop {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.vktop:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+
+
+.modal1 {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* фон */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+    /*color: #383838 !* Цвет текста *!*/
+}
+h4{
+    color: #dddddd;
+    font-size: 42px;
+    font-family: 'Vollkorn SC', serif;
+    text-shadow: 1px 1px 1px #000;
+
+}
+h5{
+    font-size: 20px;
+    color: #dddddd;
+    font-family: 'Vollkorn SC', serif;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* При отображении модального окно */
+.modal1:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+/* ширина модального окна и его отступы от экрана */
+.modal1-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal1-dialog {
+      max-width: 500px;
+      margin: 30px auto; /* отображение окна по центру */
+  }
+}
+
+/* Стили для блока с контентом окна */
+.modal1-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: url(gradient.jpg);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal1-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* Стили заголовка окна */
+.modal1-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+h6{
+    font-size: 22px;
+    color: #dddddd;
+    font-family: 'Vollkorn SC', serif;
+    border-top: 1px solid #eceeef;
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+    text-shadow: 1px 1px 1px #000;
+}
+.modal1-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Стили кнопки "х" ("Закрыть")  */
+.close1 {
+    float: right;
+    font-family: sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 2;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* Стили для закрывающей кнопки в фокусе или наведении */
+.close1:focus, .close1:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* Стили блока основного содержимого окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 30px;
+    overflow: auto;
+}
+
+
+
+
+/* КНОПКА В ФОРМЕ СЕРДЦА */
+header img {
+  border-radius: 50%;
+  margin: 13px auto;
+  display: block;
+  width: 70px;
+  border: 3px solid #fff;
+}
+.heart{
+    /*border-radius: 50%;*/
+  position: fixed;
+  bottom: 1%;
+  right: 3%;
+  display: block;
+  height: 100px;
+  width: 100px;
+    /*background: url(https://kartinkin.net/uploads/posts/2021-01/1610843193_30-p-cherno-krasnii-gradientnii-fon-47.jpg);*/
+  background-size: cover;
+  overflow: hidden;
+  /*box-shadow: 0 0 100px 10px #fff;*/
+  transition: all ease 0.3s;
+    z-index:  100;
+    cursor: pointer;
+}
+.heart:hover {
+   -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
+
+
+
+
+:root {
+  --mainColor: red ;
+}
+.LevLink {
+  background:
+     linear-gradient(
+       to bottom,
+       var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #dddddd;
+  text-decoration: none;
+  transition: background-size .2s;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.LevLink:hover {
+  background-size: 4px 50px;
+}
+
+
+
+
+.number{
+    width: 10px;
+}
+.numberCenter{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Vollkorn SC', serif;
+
+}
+.scoreCenter{
+    text-align: center;
+    max-width:50px;
+}
+
+
+

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Все фотки на сайте
+{% endblock %}
+
+{% block content %}
+    {% for el in users %}
+    <div class="alert alert-danger">
+        {{ el.vk_id }}
+    </div>
+
+    {% endfor %}
+{% endblock %}
