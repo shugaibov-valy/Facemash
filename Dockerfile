@@ -3,7 +3,9 @@ FROM python:3.9-slim
 
 
 COPY . /Facemash/
+WORKDIR /Facemash
+RUN pip install --upgrade pip
 
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
-CMD ["python3", "Facemash/run_server.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app"]
